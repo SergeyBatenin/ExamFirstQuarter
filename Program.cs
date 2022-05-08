@@ -12,6 +12,18 @@ class Program
         string[] resultArray = new string[size];
 
         // Заполнить массив валидными элементами (main algorithm)
+        FillArray(baseArray, resultArray, size);
+
+        // Вывести на печать начальный массив
+        PrintArray(baseArray);
+        Console.WriteLine();
+
+        // Вывести итоговый массив
+        PrintArray(resultArray);
+    }
+
+    static void FillArray(string[] baseArray, string[] resultArray, int size)
+    {
         if (size > 0)
         {
             int index = 0;
@@ -25,13 +37,6 @@ class Program
                 }
             }
         }
-
-        // Вывести на печать начальный массив
-        PrintArray(baseArray);
-        Console.WriteLine();
-
-        // Вывести итоговый массив
-        PrintArray(resultArray);
     }
 
     static int CountValidElements(string[] array)
